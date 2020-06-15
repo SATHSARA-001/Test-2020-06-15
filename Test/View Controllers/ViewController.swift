@@ -26,7 +26,8 @@ class ViewController: UIViewController {
         if status == true{
             let sb = UIStoryboard.init(name: "Main", bundle: nil)
             let vc = sb.instantiateViewController(withIdentifier: "LoginPage") as! LoginVC
-            self.navigationController?.pushViewController(vc, animated: true)
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
             
         }
         else{
