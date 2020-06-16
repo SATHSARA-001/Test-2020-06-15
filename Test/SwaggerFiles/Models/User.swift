@@ -9,7 +9,7 @@ import Foundation
 
 public struct User: Codable {
 
-    public var _id: Int?
+    public var _id: String?
     public var firstName: String?
     public var lastName: String?
     public var email: String?
@@ -17,7 +17,7 @@ public struct User: Codable {
     public var avatarUrl: String?
     public var accessToken: String?
 
-    public init(_id: Int?, firstName: String?, lastName: String?, email: String?, phone: String?, avatarUrl: String?, accessToken: String?) {
+    public init(_id: String?, firstName: String?, lastName: String?, email: String?, phone: String?, avatarUrl: String?, accessToken: String?) {
         self._id = _id
         self.firstName = firstName
         self.lastName = lastName

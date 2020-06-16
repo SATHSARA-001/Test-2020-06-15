@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 class LocalUser: Object {
-    @objc dynamic var id: Int = 0
+    @objc dynamic var id: String = ""
     @objc dynamic var firstName: String = ""
     @objc dynamic var lastName: String = ""
     @objc dynamic var email: String = ""
@@ -41,7 +41,7 @@ class LocalUser: Object {
     
     class func createLocalUser(user: User) {
         let newUser = LocalUser()
-        newUser.id = user._id ?? 0
+        newUser.id = user._id ?? ""
         newUser.firstName = user.firstName ?? ""
         newUser.lastName = user.lastName ?? ""
         newUser.email = user.email ?? ""

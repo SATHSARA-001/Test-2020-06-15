@@ -8,15 +8,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-       // guard let _ = (scene as? UIWindowScene) else { return }
-//        let state = UserDefaults.standard.bool(forKey: "AgreeStatus")
-//
-//        if state {
-//            
-//            let sb = UIStoryboard.init(name: "Main", bundle: nil)
-//            let vc = sb.instantiateViewController(identifier: "LoginPage") as! LoginVC
-//            setRoot(_controller: vc)
-//        }
+
         return true
     }
     
@@ -30,9 +22,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
     }
     
-    func setRoot(_controller: UIViewController) {
+    func setRoot(_controller: UIViewController,window:UIWindow) {
         if window != nil {
-            window?.rootViewController = _controller
+            window.rootViewController = _controller
         }
     }
     

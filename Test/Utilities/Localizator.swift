@@ -128,11 +128,11 @@ extension String {
     static let SignUpVC = NSLocalizedString("SignUpVC", comment: "")
     static let ForgotPasswordVC = NSLocalizedString("ForgotPasswordVC", comment: "")
     static let AppDetailsVC = NSLocalizedString("AppDetailsVC", comment: "")
-    static let WelcomeVC = NSLocalizedString("WelcomeVC", comment: "")
+    static let WelcomeVC = NSLocalizedString("LoginPage", comment: "")
     
     // Top viewController of the Storyboard
-    static let WelcomeNC = NSLocalizedString("WelcomeNC", comment: "")
-    static let AuthNC = NSLocalizedString("AuthNC", comment: "")
+    static let WelcomeNC = NSLocalizedString("LoginPage", comment: "")
+    static let AuthNC = NSLocalizedString("LoginPage", comment: "")
     static let MainTBC = NSLocalizedString("MainTBC", comment: "")
 }
 

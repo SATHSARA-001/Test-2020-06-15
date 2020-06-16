@@ -61,6 +61,9 @@
 		D021D32B24978A74006DE4B7 /* ProfileMyProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021D30424978A74006DE4B7 /* ProfileMyProfileResponse.swift */; };
 		D021D32C24978A74006DE4B7 /* AnyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021D30524978A74006DE4B7 /* AnyCodable.swift */; };
 		D021D32D24978A74006DE4B7 /* AnyEncodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D021D30624978A74006DE4B7 /* AnyEncodable.swift */; };
+		D0A36A0F2498C2C70052D4C8 /* LoginVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A36A0E2498C2C70052D4C8 /* LoginVM.swift */; };
+		D0A36A112498C3000052D4C8 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A36A102498C3000052D4C8 /* BaseVM.swift */; };
+		D0A36A132498C4340052D4C8 /* RegisterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A36A122498C4340052D4C8 /* RegisterVM.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +148,9 @@
 		D021D30424978A74006DE4B7 /* ProfileMyProfileResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileMyProfileResponse.swift; sourceTree = "<group>"; };
 		D021D30524978A74006DE4B7 /* AnyCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyCodable.swift; sourceTree = "<group>"; };
 		D021D30624978A74006DE4B7 /* AnyEncodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyEncodable.swift; sourceTree = "<group>"; };
+		D0A36A0E2498C2C70052D4C8 /* LoginVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVM.swift; sourceTree = "<group>"; };
+		D0A36A102498C3000052D4C8 /* BaseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
+		D0A36A122498C4340052D4C8 /* RegisterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVM.swift; sourceTree = "<group>"; };
 		EFCBA1DD4F41488DFA202F50 /* Pods-Test-TestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Test-TestUITests.debug.xcconfig"; path = "Target Support Files/Pods-Test-TestUITests/Pods-Test-TestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		FC76D6D41730DC5EF306E2F9 /* Pods_TestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -251,7 +257,10 @@
 				D021D1A824973DF6006DE4B7 /* ViewController.swift */,
 				D021D1DA2497504E006DE4B7 /* HomeVC.swift */,
 				D021D1D624973FCE006DE4B7 /* RegisterVC.swift */,
+				D0A36A122498C4340052D4C8 /* RegisterVM.swift */,
 				D021D1D424973FAB006DE4B7 /* LoginVC.swift */,
+				D0A36A0E2498C2C70052D4C8 /* LoginVM.swift */,
+				D0A36A102498C3000052D4C8 /* BaseVM.swift */,
 				D021D1D824974CE1006DE4B7 /* ForgotPasswordVC.swift */,
 			);
 			path = "View Controllers";
@@ -644,6 +653,8 @@
 				D021D1D524973FAB006DE4B7 /* LoginVC.swift in Sources */,
 				D021D31724978A74006DE4B7 /* ProfileAPI.swift in Sources */,
 				D021D32A24978A74006DE4B7 /* UserResponse.swift in Sources */,
+				D0A36A132498C4340052D4C8 /* RegisterVM.swift in Sources */,
+				D0A36A0F2498C2C70052D4C8 /* LoginVM.swift in Sources */,
 				D021D30C24978A74006DE4B7 /* NetworkRechability.swift in Sources */,
 				D021D30D24978A74006DE4B7 /* ApplicationService.swift in Sources */,
 				D021D30E24978A74006DE4B7 /* Handlers.swift in Sources */,
@@ -652,6 +663,7 @@
 				D021D32124978A74006DE4B7 /* User.swift in Sources */,
 				D021D31F24978A74006DE4B7 /* PushNotification.swift in Sources */,
 				D021D31B24978A74006DE4B7 /* APIs.swift in Sources */,
+				D0A36A112498C3000052D4C8 /* BaseVM.swift in Sources */,
 				D021D31224978A74006DE4B7 /* LocalUser.swift in Sources */,
 				D021D1A724973DF6006DE4B7 /* SceneDelegate.swift in Sources */,
 				D021D30A24978A74006DE4B7 /* LoadingDelegate.swift in Sources */,

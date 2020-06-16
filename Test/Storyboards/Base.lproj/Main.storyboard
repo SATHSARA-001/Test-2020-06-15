@@ -176,6 +176,9 @@
                                                 <state key="normal" title="Register">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clockOnRegister:" destination="pUL-LT-n5g" eventType="touchUpInside" id="keI-Bq-DdW"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -212,6 +215,7 @@
                         <viewLayoutGuide key="safeArea" id="Gkc-Dv-MlI"/>
                     </view>
                     <connections>
+                        <outlet property="btnRegister" destination="m33-iH-rzV" id="q0c-Bc-m9R"/>
                         <outlet property="txtEmail" destination="0Ob-jM-yi7" id="f8F-ih-h3V"/>
                         <outlet property="txtFName" destination="fd8-Sa-SAC" id="Poy-t7-T0K"/>
                         <outlet property="txtLName" destination="aS8-yV-EpW" id="fiR-u5-ozY"/>
@@ -227,7 +231,7 @@
         <!--HomeVC-->
         <scene sceneID="PQU-pX-5y3">
             <objects>
-                <viewController storyboardIdentifier="HomePage" id="7ps-cW-Kye" customClass="HomeVC" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainTBC" id="7ps-cW-Kye" customClass="HomeVC" customModule="Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9zc-Xs-wiy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -391,6 +395,8 @@
                         <outlet property="btnFPwd" destination="aVw-V4-Rj9" id="yZH-8U-6aL"/>
                         <outlet property="btnSignIn" destination="NI1-vZ-UqS" id="ewC-19-ARK"/>
                         <outlet property="btnSignUp" destination="xrR-lj-hh2" id="sq5-Pi-BkG"/>
+                        <outlet property="txtEmail" destination="kbB-Hd-O4p" id="ak5-wI-X2a"/>
+                        <outlet property="txtPWD" destination="1l1-xP-J7l" id="9vR-mR-LL5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iiQ-pY-PfJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

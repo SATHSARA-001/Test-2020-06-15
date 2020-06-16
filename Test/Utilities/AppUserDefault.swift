@@ -8,31 +8,27 @@
 
 import Foundation
 
-struct AppUserDefault {
+struct Defaults {
     
-    static let shared = UserDefaults.standard
+    static let defaults=UserDefaults.standard
     
-    // FCM token
-    static func setFCMToken(token: String) {
-        shared.set(token, forKey: "FCM_TOKEN")
-        shared.synchronize()
+    static func userAgreed() {
+        defaults.set(true, forKey: "isAgreed")
+        defaults.synchronize()
     }
     
-    static func getFCMToken() -> String {
-        if let token = shared.string(forKey: "FCM_TOKEN") {
-            return token
-        }
-        return ""
+    static func isAgreed()-> Bool {
+        let status = defaults.bool(forKey: "isAgreed")
+        return status
     }
     
-    // Agree to T&C
-    static func setAgreeStatus(status: Bool) {
-        shared.set(status, forKey: "AGREE_STATUS")
-        shared.synchronize()
+    static func loggedIn() {
+        defaults.set(true, forKey: "isLoggedIn")
+        defaults.synchronize()
     }
     
-    static func getAgreeStatus() -> Bool {
-        let status = shared.bool(forKey: "AGREE_STATUS")
+    static func isLoggedIn()->Bool {
+        let status = defaults.bool(forKey: "isLoggedIn")
         return status
     }
 }

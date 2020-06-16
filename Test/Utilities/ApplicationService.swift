@@ -49,25 +49,29 @@ class ApplicationService {
         print("Realm path: \(String(describing: try! Realm().configuration.fileURL))")
     }
     
-    public func manageUserDirection(from vc: UIViewController? = nil, window: UIWindow? = nil) {
-        guard LocalUser.current() != nil else {
-            let agreeStatus = AppUserDefault.getAgreeStatus()
-            switch agreeStatus {
-            case true:
-                directToPath(in: .Auth, for: .AuthNC, from: vc, window: window)
-            default:
-                directToPath(in: .Auth, for: .WelcomeNC, from: vc, window: window)
-            }
+    public func manageAgreedDirection(from vc: UIViewController? = nil, window: UIWindow? = nil) {
+        guard Defaults.isAgreed() else {
+            setRoot(in: .Main, for: .WelcomeVC, from: vc, window: window)
             return
         }
-        directToPath(in: .Main, for: .MainTBC, from: vc, window: window)
+        guard LocalUser.current() != nil else {
+            setRoot(in: .Main, for: .Main, from: vc, window: window)
+            return
+        }
+        setRoot(in: .Main, for: .MainTBC, from: vc, window: window)
     }
+    
+    public func setRoot(in sb: UIStoryboard.Storyboard, for identifier: String, from vc: UIViewController? = nil, window: UIWindow? = nil, data: Any? = nil) {
+           let storyboard = UIStoryboard(storyboard: sb)
+           let rootController = storyboard.instantiateViewController(withIdentifier: identifier)
+        appDelegate.setRoot(_controller: rootController,window:window!)
+       }
     
     public func directToPath(in sb: UIStoryboard.Storyboard, for identifier: String, from vc: UIViewController? = nil, window: UIWindow? = nil, data: Any? = nil) {
         let storyboard = UIStoryboard(storyboard: sb)
         let rootController = storyboard.instantiateViewController(withIdentifier: identifier)
         
-        appDelegate.setRoot(_controller: rootController)
+        appDelegate.setRoot(_controller: rootController, window: window!)
     }
     
     public func pushViewController(in sb: UIStoryboard.Storyboard, for identifire: String, from vc: UIViewController?, data: Any? = nil) {

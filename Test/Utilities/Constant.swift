@@ -14,15 +14,18 @@ struct Constant {
     static let appEnvironment: DeploymentEnvironment = .development
     
     enum DeploymentEnvironment: String {
-        case development = "http://oxygen.sandbox8.elegant-media.com/api/v1"
+        case development = "http://oxygen.sandbox15.preview.cx/api/v1"
         case staging = "http://.."
         case production = "http://..."
+       
+        
+        
     }
     
     func getCustomHeaders() -> [String:String] {
         switch Constant.appEnvironment {
         case .development:
-            return ["x-api-key": "suYSjwJx9xLHdMcUSN9jIBnEtBZKJUEPturs6aJ1hc748G966bOL"]
+            return ["x-api-key": "cXRZWOedaKl2QIdUsfAie4bW8jdFB3Fib1FE/dvznJM="]
         case .staging:
             return ["x-api-key": ""]
         case .production:

@@ -10,10 +10,16 @@ class ViewController: UIViewController {
     
     @IBAction func clickOnAgree(_ sender: UIButton) {
         
-        UserDefaults.standard.set(true, forKey: "AgreeStatus")
+        Defaults.userAgreed()
+        
+        let sb = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "LoginPage") as! LoginVC
+        navigationController?.pushViewController(vc, animated: true)
+        
+        
     }
     
-   
+    
     
     
 }
