@@ -16,6 +16,7 @@ class LoginVC: UIViewController {
         
         let sb = UIStoryboard.init(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "RegisterPage") as! RegisterVC
+        //let nav = self.selecteViewController as RegisterVC
         navigationController?.pushViewController(vc, animated: true)
     }
     
